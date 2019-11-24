@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Чат с Декларантом</string>
+    <string name="welcome_msg">Привет!</string>
+    <string name="sign_out">Выйти</string>
+    <string name="contacts_permission_rationale">Вам нужно войти.</string>
+    <string name="invite_menu_label">Приглашение</string>
+    <string name="invitation_message">Пожалуйста добавьте меня в чат</string>
+    <string name="invitation_cta">Вызов</string>
+    <string name="invitation_title">Приглашение</string>
+    <string name="sign_in">Войти</string>
+    <string name="sign_up">Регистрация</string>
+    <string name="fresh_config">Чистый лист</string>
+    <string name="cause_crash">Cause Crash</string>
+    <string name="banner_ad_unit_id" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="send_message">Отправить</string>
+    <string name="new_claim">Заявка</string>
+</resources>

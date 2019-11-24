@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:paddingTop="20dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:gravity="end"
+                android:text="Фамилия : " />
+
+            <EditText
+                android:id="@+id/surName"
+                android:hint="Фамилия"
+                android:capitalize="words"
+                android:inputType="text|textCapWords|textCapSentences" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:gravity="end"
+                android:text="Имя : " />
+
+            <EditText
+                android:id="@+id/name"
+                android:hint="Имя"
+                android:capitalize="words"
+                android:inputType="text|textCapWords|textCapSentences" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:gravity="end"
+                android:text="Отчество : " />
+
+            <EditText
+                android:id="@+id/secondName"
+                android:hint="Отчество"
+                android:capitalize="words"
+                android:inputType="text|textCapWords|textCapSentences" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:gravity="end"
+                android:text="Телефон : " />
+
+            <EditText
+                android:id="@+id/phone"
+                android:digits="0123456789+"
+                android:hint="Номер телефона"
+                android:inputType="phone" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:gravity="end"
+                android:text="Дата рождения : " />
+
+            <EditText
+                android:id="@+id/birthday"
+                android:digits="0123456789-"
+                android:hint="ДД-ММ-ГГГГ"
+                android:inputType="phone" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:gravity="end"
+                android:text="Серия паспорта : " />
+
+            <EditText
+                android:id="@+id/passportPrefix"
+                android:hint="Серия паспорта"
+                android:inputType="number" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:gravity="end"
+                android:text="Номер паспорта : " />
+
+            <EditText
+                android:id="@+id/passportNumber"
+                android:hint="Номер паспорта"
+                android:inputType="number" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:gravity="end"
+                android:text="Дата выдачи паспорта : " />
+
+            <EditText
+                android:id="@+id/passportDate"
+                android:digits="0123456789-"
+                android:hint="ДД-ММ-ГГГГ"
+                android:inputType="phone" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:gravity="center"
+                android:text="Операции : " />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:gravity="end"
+                android:text="Обеспечение : " />
+
+            <CheckBox
+                android:id="@+id/chkFirst"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+            />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:gravity="end"
+                android:text="ЭТД : " />
+
+            <CheckBox
+                android:id="@+id/chkSecond"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+            />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:gravity="end"
+                android:text="ПИ : " />
+
+            <CheckBox
+                android:id="@+id/chkThird"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+            />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:gravity="end"
+                android:text="Т1: " />
+
+            <CheckBox
+                android:id="@+id/chkForth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+            />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:gravity="end"
+                android:text="AREX : " />
+
+            <CheckBox
+                android:id="@+id/chkFifth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+            />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:gravity="end"
+                android:text="EX-1 : " />
+            <CheckBox
+                android:id="@+id/chkSixth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+             />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:gravity="end"
+                android:text="Номер машины : " />
+
+            <EditText
+                android:id="@+id/trackNumber"
+                android:hint="Номер машины"
+                android:inputType="text" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:gravity="end"
+                android:text="Номер прицепа : " />
+
+            <EditText
+                android:id="@+id/trailerNumber"
+                android:hint="Номер прицепа"
+                android:inputType="text" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:gravity="end"
+                android:text="Пропускной пункт : " />
+
+            <EditText
+                android:id="@+id/checkPoint"
+                android:hint="Пропускной пункт"
+                android:inputType="text" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:gravity="end"
+                android:text="Плательщик : " />
+
+            <EditText
+                android:id="@+id/payer"
+                android:hint="Плательщик"
+                android:inputType="text" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:gravity="end"
+                android:text="Номер договора : " />
+
+            <EditText
+                android:id="@+id/payerContractNumber"
+                android:hint="Номер договора"
+                android:inputType="text" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:gravity="end"
+                android:text="Перевозчик : " />
+
+            <EditText
+                android:id="@+id/carrier"
+                android:hint="Перевозчик"
+                android:inputType="text" />
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:gravity="end"
+                android:text="Комментарий : " />
+
+            <EditText
+                android:id="@+id/comment"
+                android:hint="Комментарий"
+                android:inputType="text" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:gravity="end"
+                android:text="Документы : " />
+
+            <ImageView
+                android:id="@+id/addPopupImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                ads:srcCompat="@drawable/ic_add_black_24dp"/>
+
+        </TableRow>
+
+
+        <TableRow android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/button_cancel_user_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_horizontal"
+                android:text="Отмена"
+                android:textAllCaps="false"
+                android:textSize="20dp" />
+
+
+            <Button
+                android:id="@+id/button_save_user_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_horizontal"
+                android:text="Отправить"
+                android:textAllCaps="false"
+                android:textSize="20dp" />
+
+        </TableRow>
+
+    </TableLayout>
+</ScrollView>
