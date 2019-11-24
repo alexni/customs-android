@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Чат с Декларантом</string>
+    <string name="app_name">Рене-Логистика</string>
     <string name="welcome_msg">Привет!</string>
     <string name="sign_out">Выйти</string>
     <string name="contacts_permission_rationale">Вам нужно войти.</string>
@@ -14,4 +14,5 @@
     <string name="banner_ad_unit_id" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
     <string name="send_message">Отправить</string>
     <string name="new_claim">Заявка</string>
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
 </resources>

@@ -53,6 +53,8 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.iid.InstanceIdResult;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
@@ -181,7 +183,8 @@ public class MainActivity extends AppCompatActivity
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         TestFairy.begin(this, "SDK-dNBBZ5L7");
         setContentView(R.layout.activity_main);
@@ -230,6 +233,31 @@ public class MainActivity extends AppCompatActivity
             }
             mFirebaseUUID = mFirebaseUser.getUid();
         }
+
+        FirebaseInstanceId.getInstance().getInstanceId()
+                .addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<InstanceIdResult> task) {
+                        if (!task.isSuccessful()) {
+                            Log.w(TAG, "getInstanceId failed", task.getException());
+                            return;
+                        }
+
+                        // Get new Instance ID token
+                        String token = task.getResult().getToken();
+
+                        // Log and toast
+                        String msg = "InstanceID Token: "+token;
+                        Log.w(TAG, msg);
+                        JSONObject postData = new JSONObject();
+                        try {
+                            postData.put("token", token);
+                            new SendData().execute("http://renelogist.ru:8080//phone/token", postData.toString(), mFirebaseUser.getUid());
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                });
 
 
         DatabaseReference messagesRef = mFirebaseDatabaseReference.child(MESSAGES_CHILD+"-"+mFirebaseUUID);
@@ -318,6 +346,7 @@ public class MainActivity extends AppCompatActivity
                 }
             }
         });
+
 
         mMessageRecyclerView.setAdapter(mFirebaseAdapter);
         //end
@@ -625,6 +654,8 @@ public class MainActivity extends AppCompatActivity
 
 
         });
+
+
     }
 
     /* Initialize main activity ui controls ( button and listview ). */
